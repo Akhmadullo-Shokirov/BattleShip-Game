@@ -1,2 +1,2 @@
 # BattleShip-Game
-A battleship game which is played on a browser.
+A battleship game that is played on a browser.
