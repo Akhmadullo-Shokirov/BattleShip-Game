@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattleShip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="board">
+        <div id="messageArea"></div>
+        <table>
+            <tr>
+                <td id="00"></td><td id="01"></td><td id="02"></td><td id="03"></td><td id="04"></td><td id="05"></td><td id="06"></td>
+            </tr>
+            <tr>
+                <td id="10"></td><td id="11"></td><td id="12"></td><td id="13"></td><td id="14"></td><td id="15"></td><td id="16"></td>
+            </tr>
+            <tr>
+                <td id="20"></td><td id="21"></td><td id="22"></td><td id="23"></td><td id="24"></td><td id="25"></td><td id="26"></td>
+            </tr>
+            <tr>
+                <td id="30"></td><td id="31"></td><td id="32"></td><td id="33"></td><td id="34"></td><td id="35"></td><td id="36"></td>
+            </tr>
+            <tr>
+                <td id="40"></td><td id="41"></td><td id="42"></td><td id="43"></td><td id="44"></td><td id="45"></td><td id="46"></td>
+            </tr>
+            <tr>
+                <td id="50"></td><td id="51"></td><td id="52"></td><td id="53"></td><td id="54"></td><td id="55"></td><td id="56"></td>
+            </tr>
+            <tr>
+                <td id="60"></td><td id="61"></td><td id="62"></td><td id="63"></td><td id="64"></td><td id="65"></td><td id="66"></td>
+            </tr>
+        </table>
+        <form>
+            <input type="text" id="guessInput" placeholder="A0">
+            <input type="button" id="fireButton" value="Fire!" onclick="handleInput()">
+        </form>
+    </div>
+    <div class="modal-container" id="modal-container">
+        <div class="modal">
+            <iframe id="winner" src="https://www.youtube.com/embed/gQljjskKsYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            <div id="buttons">
+                <button id="close">Play again.</button>
+                <button id="close" onclick="closeVideo()">Finish the game.</button>
+            </div>
+        </div>
+    </div>
+    <div class="game-info" id="info">
+        <div class="modal modal-info">
+            <div class="header">
+                <h1>Instruction to play.</h1>
+            </div>
+            <div class="main">
+                <h2>Description of the game.</h2>
+                <p>This is a famous BattleShip game with a 7X7 board. There are three ships hidden in the board. Each ship consists of 3 cells. The ships are placed either horizontal or vertical direction.</p>
+                <h2>How to play</h2>
+                <p>As it is mentioned in the description, there are 3 hidden ships in the board. You have to guess locations of those ships by entering your guess into the input. If you enter a guess that is out of the board, you get an alert. The number of guesses are not limited, so you can play with it until you sunk all the ships. So now, press the button below to start the game. <br> Good luck!!!</p>
+            </div>
+            <div id="buttons">
+                <button id="start">Start the game!</button>
+            </div>
+        </div>
+    </div>
+    <script src="battleship.js"></script>
+</body>
+</html>

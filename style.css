@@ -1,0 +1,137 @@
+body {
+    background-color: black;
+}
+
+#board {
+    position: relative;
+    width: 1024px;
+    height: 863px;
+    background: url('board.jpg') no-repeat;
+    margin: auto;
+}
+
+#messageArea {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: rgb(83, 175, 19);
+    /* font-size: 1em; */
+}
+
+table {
+    position: absolute;
+    top: 98px;
+    left: 173px;
+    border-spacing: 0px;
+}
+
+td {
+    width: 94px;
+    height: 94px;
+}
+
+form {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 15px;
+    background-color: rgb(83, 175, 19);
+    margin: 0;
+}
+
+
+form input {
+    background-color: rgb(152, 207, 113);
+    border-color: rgb(83, 175, 19);
+    font-size: 1em;
+}
+
+.hit {
+    background: url('ship.png') no-repeat center center;
+}
+
+.miss {
+    background: url('miss.png') no-repeat center center;
+}
+
+.modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+    
+}
+
+.modal {
+    width: 600px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal iframe {
+    position: relative;
+    align-items: center;
+    height: 400px;
+    width: 600px;
+}
+
+#close {
+    background-color: rgb(83, 175, 19);
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 24px;
+    padding: 10px 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.game-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.game-info.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+.modal-info {
+    background-color: rgb(199, 193, 193);
+}
+
+.main p {
+    font-size: 20px;
+}
+
+#start {
+    font-size: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(83, 175, 19);
+    padding: 10px;
+}
